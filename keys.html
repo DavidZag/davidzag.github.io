@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Default Required Resources -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=569,
+    maximum-scale=1"
+        />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Blog RSS"
+            href="//mehvix.com/posts/rss.xml"
+        />
+        <link href="/static/css/style.css" type="text/css" rel="stylesheet" />
+        <script src="/static/js/include.js"></script>
+
+        <!-- HLJS (try and remove if not used) -->
+        <!-- https://cdnjs.com/libraries/highlight.js -->
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="/static/css/atom-one-dark.css"
+        />
+        <script
+            src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"
+            integrity="sha512-MinqHeqca99q5bWxFNQEQpplMBFiUNrEwuuDj2rCSh1DgeeTXUgvgYIHZ1puBS9IKBkdfLMSk/ZWVDasa3Y/2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script>
+            hljs.highlightAll()
+        </script>
+
+        <title>Mehvix | Keys</title>
+        <style>
+            :root {
+                --code-bg-color: #210124 !important;
+                --outside-bg-color: #210124 !important;
+            }
+        </style>
+
+        <script>
+            function copyText(id) {
+                var textToCopy = document.getElementById(id)
+
+                var currentRange
+                if (document.getSelection().rangeCount > 0) {
+                    currentRange = document.getSelection().getRangeAt(0)
+                    window.getSelection().removeRange(currentRange)
+                } else {
+                    currentRange = false
+                }
+
+                var CopyRange = document.createRange()
+                CopyRange.selectNode(textToCopy)
+                window.getSelection().addRange(CopyRange)
+                document.execCommand('copy')
+
+                window.getSelection().removeRange(CopyRange)
+
+                if (currentRange) {
+                    window.getSelection().addRange(currentRange)
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="box">
+            <div class="nav">
+                <a href="./index.html">~</a>/<a href="" class="inverse-bg"
+                    >Keys</a
+                >
+            </div>
+
+            <h1>Matrix</h1>
+            <ul style="font-weight: 500">
+                <li>Element Desktop (Windows): <code>RQHVDPLNIL</code></li>
+                <li>Element Desktop (Linux): <code>OLBDXYXCNV</code></li>
+                <li>Element Android: <code>NUOPAMGSIG</code></li>
+            </ul>
+
+            <h1>PGP Keys</h1>
+            <h2>Keybase</h2>
+            Grab all keys on my
+            <a href="https://keybase.io/mehvix">Keybase account</a>:
+            <pre><code class="pgp language-sh"># curl + gpg pro tip import mehvix's keys
+curl https://keybase.io/mehvix/pgp_keys.asc | gpg --import
+                
+# the Keybase app can push to gpg keychain, too
+keybase pgp pull mehvix</code></pre>
+
+            <h2>ProtonMail PGP</h2>
+            <p>
+                Most email sent to @[this domain] goes to ProtonMail. If you
+                trust ProtonMail, use this key. If you don't, use my
+                <a href="#pgp-personal">personal key</a> below.
+            </p>
+            <ul>
+                <li>
+                    ProtonMail API:
+                    <a
+                        href="//api.protonmail.ch/pks/lookup?op=get&search=mehvix@protonmail.com"
+                        >Download</a
+                    ><br />
+                </li>
+                <li>
+                    mehvix.com:
+                    <a href="./static/media/mehvix@protonmail.com.asc"
+                        >Download</a
+                    ><br />
+                </li>
+                <li>
+                    mehvix.com:
+                    <a href="javascript:;" onclick="copyText('pgp-pm')"
+                        >Copy to clipboard</a
+                    >
+                </li>
+                <li>
+                    Fingerprint:
+                    <code>A7969972931732460A6D49F7DA2E597476F671AA</code>
+                </li>
+                <li>
+                    Primary Key-ID:
+                    <code>DA2E 5974 76F6 71AA</code>
+                </li>
+            </ul>
+            <pre><code class="pgp select-all language-sh no-scroll">curl -L https://mehvix.com/static/media/mehvix@protonmail.com.asc | gpg --import</code></pre>
+
+            <details>
+                <summary>Reveal ProtonMail Key</summary>
+                <pre><code id="pgp-pm" class="select-all language-diff">-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: ProtonMail
+
+xsBNBFwGCl4BCACpgPGL6hTyM+t9CloUGX8e2SLPAxtvLPlsrPoDS81cMEhQ
+1/E4fgATyfvsXQoK/3j9G9X/rjltAlrky7oUSLqPITqKQCF16NFOlJCki9d4
+ZkoyEVSqEI2/e2U8SG/cxLzAWCPVZpfR2GaH2V3LGjasfASF3UO9vLp6sjre
+pOCR9BRiWT5CS7oJwWKzINMLUEMoq9Nd8FYeVZ6kNzboZ46Km6EkPOscDvSw
+SjcpekHsMAdRQsI/+SQ/+bj1HtIIkldMq9lewCkM6VaW9vUm+kM1/5tWnJpR
+tvxmnVNFZAjlcg5Qo0KAA0nu6UqSeNY1iOqqdeNjw7owqu+IvAMeT8hJABEB
+AAHNLyJtZWh2aXhAcHJvdG9ubWFpbC5jb20iIDxtZWh2aXhAcHJvdG9ubWFp
+bC5jb20+wsB/BBABCAApBQJcBgpeBgsJBwgDAgkQ2i5ZdHb2caoEFQgKAgMW
+AgECGQECGwMCHgEACgkQ2i5ZdHb2caqZgwgAoi+RfydNwagIEbsKxKr8Rcl2
+HJ7gQVSQqiazwVHvpoDAeu8cX6wyR/JYFIL5rOUKMo9RjHz3xxGjz0OYNEpj
+gmpG3/l2ygddpgqVOhsOtRNi3vvuUGfce//nQe4J1ywpGXQofsz4/4cP2pTL
+QAQxgZIAVLHJUePyXVWHw1QDU01sn+6DnPlPd1okp6Yj2ZSAN43NkxnYecuA
+CGLQrUqn/fmzPerClHnnqt+nNON03s/v7uiZgHHRTL+9ZC0SuCw1hSDYUG96
+5lNBYFxhHlB+aR7m5f+J6raLtSdfQO0jVCA68aMCpHv/zLLzn72z/p/yRf7z
+Q1/GvCvFukMsGmb4nM7ATQRcBgpeAQgAmbcDPyTzkFAYmORcS2FZQscjCpa6
+nP/xNI6nPNqDTlzDmNT8vj6O/kXltjC6GBHWDeGuErtVpGgZyyLgVSipwy9/
+PX3l05N4DLSACWPU1zqMrE/Twa7T9Xs6QAWZ4ey/Cw5CjSg1EDQ3wQ+lnX8L
+qTTkwdxxo5KDyZ3z6RO5MrWr2aGVKTSca/37CV73NZHodsNRTep7TdFl4Ayg
+v0vhJTm2HvKlD96+9knw4OgmoxsHoifRygPW8nCgmeFQxjQE+SkRwCQCHh0D
+t6cVi9u5gj5P4ZOciDBvrxT8weQe7qTxKrgZ4BL5WQk1JTISgFYcAIKLvUEl
+pUlBMxbRkghFdQARAQABwsBpBBgBCAATBQJcBgpeCRDaLll0dvZxqgIbDAAK
+CRDaLll0dvZxqgo4B/9SDZHibQMlMQwpB/HK6d62jfiS6G1x0YRmKibk0pe5
+dDo8iHHG7BHYgYdMBK7y23QbmExljm9ieOLpriSLhmneEJjRkqAE0a3sUxqK
+yv9zQJXSBiDoaVAqEPnuJHF67KagKsWnrXYTS/tdyPXgFG1NWh7RDS5uF6dE
+d9L92XqFE8JqFXtx00yMEKDU/asEbpAj15sp+x5PeqD8zzqqlhy17Mn/pOLS
+DgDijjaudFqQR/3Vt18G2rMYIgvs0Se184IyAWkFnbZae+e0aBBxRjK+K84B
+LKutr+KwFwaJLLcqxjciyMueRAnPoKrodbIZ+ALMR2GMhJD6y7RuDBm1ll7c
+=SbG5
+-----END PGP PUBLIC KEY BLOCK-----</code></pre>
+            </details>
+
+            <br />
+            <h2>Personal PGP</h2>
+            <p>
+                For if you don't trust ProtonMail or you're contacting me
+                through something other than email.
+            </p>
+            <ul>
+                <li>
+                    mehvix.com:
+                    <a href="./static/media/Max Vogel_0x8DDCB0EF_public.asc"
+                        >Download</a
+                    ><br />
+                </li>
+                <li>
+                    mehvix.com:
+                    <a href="javascript:;" onclick="copyText('pgp-personal')"
+                        >Copy to clipboard</a
+                    >
+                </li>
+                <li>
+                    Fingerprint:
+                    <code>4C0719541B56135DDED18C86716AED528DDCB0EF</code>
+                </li>
+                <li>
+                    Primary Key-ID:
+                    <code>716A ED52 8DDC B0EF</code>
+                </li>
+            </ul>
+            <pre><code class="pgp select-all language-sh no-scroll">curl -L https://www.mehvix.com/static/media/Max%20Vogel_0x8DDCB0EF_public.asc | gpg --import</code></pre>
+
+            <details id="pgp-personal">
+                <summary>Reveal Personal Key</summary>
+
+                <pre><code  class="select-all language-diff">-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+=nTuc
+-----END PGP PUBLIC KEY BLOCK-----</code></pre>
+            </details>
+
+            <div id="footer">
+                <table id="footerTable">
+                    <tr>
+                        <td>$BTC</td>
+                        <td>15adHcuUPLHzVmUqKqgeLfLzvtfD5r7WJ1</td>
+                    </tr>
+                    <tr>
+                        <td>$XMR</td>
+                        <td>
+                            45MaKMYnWBnNWS4rtbrMp8C6wL1B1mguW6AjmJBGqLJkCzVUMuXwamzRfrmiwLw1WrbUptNjY1DoL4Yu4fXqTDAcDEWpuTZ
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>$ETH</td>
+                        <td>0xeeC384Cdef3aD975EdF1D2f6C1dC9a4b1fEEBF74</td>
+                    </tr>
+                    <tr>
+                        <td id="footerDateYear">2021</td>
+                        <td>Max Vogel</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
